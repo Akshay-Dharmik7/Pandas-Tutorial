@@ -1,0 +1,7 @@
+{
+  "Name": { "0": "Akshay", "1": "Kartik", "2": "Rohan" },
+  "Age": { "0": 25, "1": 24, "2": 27 },
+  "City": { "0": "Nagpur", "1": "Jaipur", "2": "Pune" },
+  "Role": { "0": "Software Engineer", "1": "HR", "2": "IT Engieer" }
+}
+
