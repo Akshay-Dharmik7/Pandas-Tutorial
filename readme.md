@@ -46,3 +46,62 @@ mydataset = {
 
 myvar2 = pd.DataFrame(mydataset)  
 print(myvar2)  
+
+## Series in Pandas
+### What is a Series?
+- A Pandas Series is like a column in a table.
+- It is a one-dimensional array holding data of any type.
+- A Series is similar to: `NumPy array + Labels(Index)`.
+
+
+#### Syntax:
+- `pd.Series(data, index)`
+
+| Parameter | Description       |
+| --------- | ----------------- |
+| `data`    | Values            |
+| `index`   | Labels (optional) |
+
+
+#### Example:
+s = pd.Series([10, 20, 30, 40])  
+print(s)  
+
+### Labels:
+- If nothing else is specified, the values are labeled with their index number.
+- First value has index 0, second value has index 1 etc.
+- This label can be used to access a specified value.
+
+#### Example:
+- Return the first value of the Series:
+- `print(myvar[0])`.
+
+### Create Series with specific index/label
+#### Example:
+a = [1, 7, 2]  
+myvar = pd.Series(a, index = ["x", "y", "z"])  
+print(myvar)  
+
+
+## DataFrame in pandas
+- A DataFrame is a two-dimensional labeled data structure in Pandas.
+- It looks like a table with:
+    - Rows
+    - Columns
+    - Indexes
+- A DataFrame can store:
+    - Numbers
+    - Strings
+    - Boolean values
+    - Mixed data types
+
+### Simple Interview Definition: 
+- A DataFrame in Pandas is a two-dimensional labeled data structure used to store and manipulate tabular data with rows and columns.
+
+### Structure of DataFrame
+#### Example:
+| Index | Name   | Age | City   |
+| ----- | ------ | --- | ------ |
+| 0     | Akshay | 25  | Pune   |
+| 1     | Rahul  | 24  | Mumbai |
+
