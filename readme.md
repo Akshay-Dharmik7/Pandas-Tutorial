@@ -105,3 +105,44 @@ print(myvar)
 | 0     | Akshay | 25  | Pune   |
 | 1     | Rahul  | 24  | Mumbai |
 
+
+## head() and tail() in pandas
+- head() and tail() are used to quickly view data in a DataFrame or Series.
+- They are very useful for:
+    - Checking dataset structure
+    - Verifying imported data
+    - Inspecting rows
+
+### 1. head() Function:
+- head() returns the first rows of a dataset.
+- Syntax
+    - `df.head(n)`
+
+| Parameter | Description                                |
+| --------- | ------------------------------------------ |
+| `n`       | Number of rows to display. Default: 5 rows |
+
+### 2. tail() Function:
+- tail() returns the last rows of a dataset.
+- Syntax:
+    - `df.tail(n)`
+
+### Simple Interview Definition
+- head() and tail() in Pandas are used to display the first and last rows of a DataFrame or Series for quick data inspection.
+
+## info() in pandas
+- info() is used to get a summary of a DataFrame.
+- It provides important information like:
+    - Number of rows and columns
+    - Column names
+    - Data types
+    - Non-null values
+    - Memory usage
+
+- Syntax:
+    - `df.info()`
+
+### Simple Interview Definition
+- info() in Pandas is used to display a concise summary of a DataFrame, including column names, datatypes, non-null values, and memory usage.
+
+
