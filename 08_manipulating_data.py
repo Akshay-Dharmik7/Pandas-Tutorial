@@ -40,4 +40,18 @@ print(df)
 
 
 
+print("--------------- update value loc[] ----------------")
+# updating data from datafram
+df.loc[0, 'Salary'] = 50000
+print(df)
+
+print("--------------- update value iloc[] ----------------")
+# updating data from datafram
+df.iloc[0, 2] = 60000
+print(df)
+
+
+
+
+
 

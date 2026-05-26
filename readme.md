@@ -197,6 +197,58 @@ print(myvar)
 - df.drop(['Age', 'Marks'], axis=1)
 
 
+## Updating Data in Dataframe:
+### loc[] and iloc[] in pandas
+- loc[] and iloc[] are used for:
+    - Selecting rows
+    - Selecting columns
+    - Accessing specific data
+    - Updating values
+- from a DataFrame.
+
+### loc[] in Pandas
+- loc[] works with:
+    - Row labels
+    - Column names
+- Syntax: `df.loc[row_label, column_label]`
+
+### 1. Select Single Row
+- df.loc[1]
+
+### 2. Select Multiple Rows
+- df.loc[[0,2]]
+
+### 3. Select Specific Columns
+- df.loc[:, ['column1', 'column2']]
+
+### 4. Select Rows and Columns Together
+- print(df.loc[0:2, ['column1', 'column2']])
+
+### 5. Update Data Using loc[]
+df.loc[1, 'column'] = value
+
+
+### iloc[] in Pandas
+- iloc[] works with:
+     - Integer positions
+- Syntax: `df.iloc[row_position, column_position]`
+
+### 1. Select Single Row
+- df.iloc[1]
+
+### 2. Select Multiple Rows
+- df.iloc[[0,2]]
+
+### 3. Select Specific Columns
+- df.iloc[:, [0,2]]
+
+### 4. Select Rows and Columns Together
+- df.iloc[0:3, 0:2]
+
+### 5. Update Data Using iloc[]
+- df.iloc[0, 2] = 99
+
+
 
 
 
