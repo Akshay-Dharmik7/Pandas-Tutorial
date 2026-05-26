@@ -25,3 +25,11 @@ print(df.info())
 # describe()
 print("-------------- Describe of dataset ----------------")
 print(df.describe())
+
+# df.shape
+print("---------------- shape of dataframe --------------")
+print(df.shape) #output - (rows, columns)
+
+# df.columns
+print("---------------- Name of columns in dataframe --------------")
+print(df.columns)
