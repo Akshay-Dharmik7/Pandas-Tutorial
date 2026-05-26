@@ -145,4 +145,31 @@ print(myvar)
 ### Simple Interview Definition
 - info() in Pandas is used to display a concise summary of a DataFrame, including column names, datatypes, non-null values, and memory usage.
 
+## Adding New Column in pandas
+- In Pandas, a new column can be added to a DataFrame using:
+    - Assignment operator (=)
+    - insert()
+
+### 1. Add Column Using Assignment (=):
+- Most common method.
+- Syntax: `df[column_name] = [values]`
+
+#### Important Rule:
+- Length of values must match number of rows.
+
+#### Add Column with Single Value:
+- Syntax: `df[column_name] = 'value'`
+
+### Add Column Using insert()
+- Used to insert column at specific position.
+- Syntax: `df.insert(location, column_name, values)`
+
+| Parameter    | Meaning            |
+| ------------ | ------------------ |
+| `location`   | Position index     |
+| `column_name`| Column name        |
+| `values`     | Values to insert   |
+
+
+
 
