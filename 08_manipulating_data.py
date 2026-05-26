@@ -21,3 +21,23 @@ print("*" * 70)
 # Adding new column at specific position.
 df.insert(3, "Bonus", df["Salary"] * 0.1)
 print(df)
+
+print("--------------- drop single row ----------------")
+# delete single row
+df2 = df.drop(1, inplace=True)
+print(df)
+
+
+print("--------------- drop column ----------------")
+# Deleting column
+df.drop(columns = ["Location"], inplace=True)
+print(df)
+
+print("--------------- drop multiple column ----------------")
+# deleting multiple columns
+df.drop(columns = ["Location", "Bonus"], inplace=True, errors= 'ignore')
+print(df)
+
+
+
+

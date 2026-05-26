@@ -171,5 +171,32 @@ print(myvar)
 | `values`     | Values to insert   |
 
 
+## Deleting Columns from Dataframe
+### df.drop():
+- drop() is used to remove:
+    - Rows
+    - Columns
+- from a DataFrame.
+- Syntax: `df.drop(labels, axis=0, inplace=False)`
+
+| Parameter      | Meaning          |
+| -------------- | ---------------- |
+| `labels`       | Row/column name  |
+| `axis=0`       | Remove rows      |
+| `axis=1`       | Remove columns   |
+| `inplace=True` | Permanent change |
+
+### 1. Drop Rows:
+- Default axis is 0.
+- df2 = df.drop(1)
+
+### 2. Drop Columns
+- df.drop(column_name, axis=1)
+
+### 3. Remove Multiple Columns
+- df.drop(['Age', 'Marks'], axis=1)
+
+
+
 
 
