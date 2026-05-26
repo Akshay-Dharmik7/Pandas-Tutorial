@@ -248,6 +248,118 @@ df.loc[1, 'column'] = value
 ### 5. Update Data Using iloc[]
 - df.iloc[0, 2] = 99
 
+## Handling Missing Values in pandas
+- Missing values are empty or unavailable data in a dataset.
+- In Pandas, missing values are usually represented as:
+    - `NaN`
+    - (NaN = Not a Number)
+
+### Why Handle Missing Values?
+- Missing values can cause problems in:
+    - Data analysis
+    - Machine Learning
+    - Calculations
+    - Visualization
+- So they must be:
+    - Detected
+    - Removed
+    - Replaced
+
+### 1. Detect Missing Values
+- Using isnull() or isna().
+
+#### a) isnull()
+- `df.isnull()`
+
+#### b) isna
+- `df.isna`
+
+#### c) Count Missing Values
+- `df.isnull().sum()`
+
+### 2. Remove Missing Values
+- Using dropna().
+
+#### a) Remove Rows with Missing Values
+- `df.dropna()`
+
+#### Remove Columns with Missing Values
+- `df.dropna(axis=1)`
+
+| Axis     | Meaning |
+| -------- | ------- |
+| `axis=0` | Rows    |
+| `axis=1` | Columns |
+
+
+### 3. Fill Missing Values
+- Using fillna().
+
+#### a) Fill with Mean
+- df['Age'] = df['Age'].fillna(df['Age'].mean())
+
+#### b) Fill with Median
+- df['Age'].fillna(df['Age'].median())
+
+#### c) Fill with Mode
+- df['Age'].fillna(df['Age'].mode()[0])
+
+### 4. Forward Fill (ffill)
+- Uses previous value.
+- `df.fillna(method='ffill')`
+
+### 5. Backward Fill (bfill)
+- Uses next value.
+- `df.fillna(method='bfill')`
+
+### 6. Interpolation
+- Fills values mathematically.
+- Syntax: `df.interpolate()`
+
+### Interpolation in pandas
+- Interpolation is used to fill missing values (NaN) by estimating values based on nearby data.
+- It is commonly used in:
+    - Time series data
+    - Numerical datasets
+    - Data preprocessing
+    - Machine Learning
+
+#### Why Use Interpolation?
+- Instead of removing missing values, interpolation estimates them intelligently.
+
+#### 1. Basic Interpolation
+- `df.interpolate()`
+
+#### 2. Linear Interpolation (Default)
+- Default method: `df.interpolate(method='linear')`
+- Works best for numerical continuous data.
+
+#### 3. Forward Interpolation
+- Uses previous value.
+- `df.interpolate(method='pad')`
+
+#### 4. Backward Interpolation
+- Uses next value.
+- `df.interpolate(method='backfill')`
+
+#### 5. Polynomial Interpolation
+- Used for curved data patterns.
+- `df.interpolate(method='polynomial', order=2)`
+
+#### 6. Time Interpolation
+- Used with datetime index.
+- `df.interpolate(method='time')`
+- Useful for:
+    - Stock prices
+    - Sensor data
+    - Weather data
+
+### 7. Check Non-Missing Values
+- Using notnull().
+- `df.notnull()`
+
+
+
 
 
 
