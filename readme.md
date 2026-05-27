@@ -418,7 +418,11 @@ df.loc[1, 'column'] = value
 ### Multiple Aggregations
 - Using agg().
 - Example:
-    - `print(df['Marks'].agg(['sum', 'mean', 'max']))` 
+    - `print(df['Marks'].agg(['sum', 'mean', 'max']))`
+
+### Group-wise Aggregation
+- Using groupby(). 
+
 
 
 

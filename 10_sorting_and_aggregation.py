@@ -73,3 +73,10 @@ print(df["Marks"].median())
 
 # print("---------- Multiple Aggregate function ---------")
 print(df["Age"].agg(["sum", "min", "max", "mean", "count", "std", "median"]))
+
+# Group-wise Aggregation
+print("---------- Group-wise Aggregation -------------")
+print(df.groupby("Age")["Marks"].sum())
+print(df.groupby("Marks")["Age"].sum())
+print(df.groupby("Marks")["Age"].count())
+
