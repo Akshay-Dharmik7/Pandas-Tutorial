@@ -423,6 +423,64 @@ df.loc[1, 'column'] = value
 ### Group-wise Aggregation
 - Using groupby(). 
 
+## Merging and Joining in pandas
+- Merging and joining are used to combine multiple DataFrames.
+- Similar to SQL joins, Pandas provides:
+
+| Function   | Purpose                          |
+| ---------- | -------------------------------- |
+| `merge()`  | Combine DataFrames using columns |
+| `join()`   | Combine using index              |
+| `concat()` | Stack DataFrames                 |
+
+### Why Use Merging and Joining?
+- Used when data is stored in multiple tables/files.
+- Example:
+    - Employee details in one DataFrame
+    - Salary details in another DataFrame
+- Need to combine both.
+
+### 1. merge() in Pandas
+- Used to combine DataFrames based on common columns.
+- Syntax: `pd.merge(left_df, right_df, on='common_column')`
+
+#### Types of Joins in merge()
+
+| Join Type | Description           |
+| --------- | --------------------- |
+| `inner`   | Matching records only |
+| `left`    | All left records      |
+| `right`   | All right records     |
+| `outer`   | All records           |
+
+
+#### 1. Inner Merge (Default)
+- Returns matching records only.
+
+#### 2. Left Join
+- Keeps all rows from left DataFrame.
+
+#### 3. Right Join
+- Keeps all rows from right DataFrame.
+
+#### 4. Outer Join
+- Keeps all rows from both DataFrames.
+
+
+### 2. join() in Pandas
+- Used mainly with indexes.
+- Syntax: `df1.join(df2)`
+
+#### Difference Between merge() and join()
+
+| Feature        | `merge()` | `join()` |
+| -------------- | --------- | -------- |
+| Works on       | Columns   | Index    |
+| Flexibility    | High      | Simple   |
+| SQL-like joins | Yes       | Limited  |
+
+
+
 
 
 
