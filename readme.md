@@ -354,9 +354,72 @@ df.loc[1, 'column'] = value
     - Sensor data
     - Weather data
 
-### 7. Check Non-Missing Values
+#### 7. Check Non-Missing Values
 - Using notnull().
 - `df.notnull()`
+
+## Sorting and Aggregation in pandas
+- Sorting and aggregation are important operations in Pandas used for:
+    - Organizing data
+    - Summarizing data
+    - Analyzing datasets
+    - Finding patterns and statistics
+
+## 1. Sorting in Pandas
+- Sorting means arranging data in:
+    - Ascending order
+    - Descending order
+- Pandas provides:
+
+| Function        | Purpose        |
+| --------------- | -------------- |
+| `sort_values()` | Sort by values |
+| `sort_index()`  | Sort by index  |
+
+### sort_values()
+- Sorts rows based on column values.
+- Syntax:
+    - `df.sort_values(by='column_name')`
+
+### Sort_index()
+- Sorts based on row labels.
+-  Syntax:
+    - `df.sort_index()`
+
+### Important Parameters
+
+| Parameter   | Meaning          |
+| ----------- | ---------------- |
+| `by`        | Column name      |
+| `ascending` | True/False       |
+| `inplace`   | Permanent change |
+
+
+## 2. Aggregation in Pandas
+- Aggregation means summarizing data using statistical operations.
+- Examples:
+    - Sum
+    - Average
+    - Count
+    - Maximum
+    - Minimum
+
+### Common Aggregation Functions
+| Function   | Purpose            |
+| ---------- | ------------------ |
+| `sum()`    | Total              |
+| `mean()`   | Average            |
+| `max()`    | Maximum            |
+| `min()`    | Minimum            |
+| `count()`  | Count values       |
+| `std()`    | Standard deviation |
+| `median()` | Middle value       |
+
+### Multiple Aggregations
+- Using agg().
+- Example:
+    - `print(df['Marks'].agg(['sum', 'mean', 'max']))` 
+
 
 
 
