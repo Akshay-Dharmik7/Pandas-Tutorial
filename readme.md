@@ -479,6 +479,11 @@ df.loc[1, 'column'] = value
 | Flexibility    | High      | Simple   |
 | SQL-like joins | Yes       | Limited  |
 
+### 3. concat() in Pandas
+- Used to stack DataFrames.
+- Vertical Concatenation: `pd.concat([df1, df2])` 
+- Horizontal Concatenation: `pd.concat([df1, df2], axis=1)`
+
 
 
 
